@@ -1,6 +1,10 @@
 $(function(){
     checkStatus();
     addProject();
+    
+    //加送出
+    submit_data();
+    
     //　　縮放　詳細工時區塊
     $('.worktime_data_li').on('click',function(){
         var $detail=$(this).find('.wt_detail');
@@ -51,7 +55,7 @@ function checkStatus(){
 
 //新增專案
 function addProject(){
-    $('.w_wt_btn_div input').on('click',function(){
+    $('.w_wt_btn_add').on('click',function(){
        var $header=$(this).parent().parent().siblings();
         var project="<tr><td><input type='text'></td><td colspan='3'><textarea></textarea></td>";
         $header.find('.wt_header_time').each(function(){
@@ -74,4 +78,20 @@ function addProject(){
         project+="</tr>";
         $(this).parent().siblings().find('table tr').last().after(project);
     });
+}
+
+//假送出
+function submit_data(){
+     $('.w_wt_btn_save').on('click',function(){
+         $header=$(this).parent().parent().siblings('.wt_header_div');
+        var date=$header.find('span').first().text();
+         alert(date+" 工時已經暫存!");
+     });
+    $('.w_wt_btn_submit').on('click',function(){
+        var $header=$(this).parent().parent().siblings('.wt_header_div');
+        var date=$header.find('span').first().text();
+        $header.find('span').eq(1).text('待審');
+        alert(date+" 工時已經提交!");
+        checkStatus();
+     });
 }
