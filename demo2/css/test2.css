@@ -1,0 +1,207 @@
+* {
+    -webkit-box-sizing: border-box;
+   	   -moz-box-sizing: border-box;
+    	    box-sizing: border-box
+}
+html{
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    min-width: 20rem;
+    min-height: 80%;
+    max-height: 100%;
+    background-image: url("../image/bg.jpg");
+    background-size:cover;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+}
+
+#head {
+    position:fixed;
+    top: 0;
+    height: 9%;
+    width:100%;
+}
+#content{
+    display: inline-block;
+    margin-top: 9%;
+    height: 80%;
+    width: 100%;
+    min-height: 80%;
+    min-width: 30%;
+    z-index: 999;
+}
+#footer{
+    height: 9%;
+    width: 100%;
+    padding-top: 1.3rem;
+}
+
+
+.head_bg{
+    background-color: rgba(127, 255, 212, 0);
+    
+    
+}
+
+.fr_title {
+    margin-top: 1%;
+    height: 10%;
+    font-size: 2rem;
+}
+
+.form_layout {
+    display:inline-block;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    margin-right: 0;
+    border-color: red;
+    border-width: 0.3rem;
+}
+
+
+
+.fr {
+    text-align: center;
+}
+
+
+
+.form_border{
+    border-color: rgba(197, 232, 223, 0.01);
+    border-width: 0.01rem  ;
+    border-style: solid;
+    width: 30%;
+    min-width: 10.6rem;
+    max-width: 12.6rem;
+    display:inline-block;
+    border-radius: 1.2rem;
+     background-color: rgba(95, 204, 204, 0.29);
+    text-align: left
+}
+.input_layout{
+     border-color: rgba(25, 176, 214, 0.27);
+     border-radius:1.2rem 1.2rem 1.2rem 0;
+    border-width:0 0 0 0.1rem ;
+    width: 75.8%;
+    max-width:10.9rem;
+   
+    font-size: 1rem;
+    height: 1.8rem;
+    
+    padding-left:0.51rem;
+    background-color: rgba(187, 235, 219, 0.19);
+    background: linear-gradient(to right,rgba(187, 235, 224, 0.21),rgba(252, 252, 252, 0));
+}
+
+form span{
+    margin-left: 0.3rem;
+   
+}
+
+.form_btn{
+    position: relative;
+    font-size: 1rem;
+    background:radial-gradient(circle,rgba(204, 210, 235, 0.28),rgba(252, 252, 252, 0));
+    border-radius: 150%;
+    padding: 0.3rem 0.6rem;
+    height: 2rem;
+    width: 3.5rem;
+    border: none;
+    z-index: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.form_btn:hover{
+    background:rgba(0, 0, 0, 0.49);
+    box-shadow: 1px 1px 10px 2px #cecece;
+    color: #fff7f7;
+}
+
+
+#login_Form ul li{
+    display:inline-block;
+    margin:0.1rem 0;
+}
+#login_Form>div a{
+    position: relative;
+    display: inline-block;
+    margin-left: 1rem;
+    height: 2rem;
+    width: 4rem;
+    line-height: 2rem;
+    color: black;
+    text-decoration-line: none;
+    transition: all 0.5s;
+}
+a:visited{
+    color: #000000;
+}
+a::after{
+    content: "";
+    position: absolute;
+    top:calc((2rem)/2 - 7.5px);
+    left:calc((4rem)/2 - 7.5px);
+    width: 0rem;
+    height: 0rem;
+    border: 4px rgba(0, 0, 0, 0.15) solid;
+    border-radius: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+}
+a::before{
+    content: "";
+    position: absolute;
+    top:calc((2rem)/2 - 15px);
+    left:calc((4rem)/2 - 15px);
+    width: 0rem;
+    height: 0rem;
+    border: 15px rgba(0, 0, 0, 0.1) double;
+    border-radius: 100%;
+    box-shadow: 0px 0px 50px 10px rgba(162, 156, 156, 0.38);
+    opacity:0;
+    transition: all 0.5s;
+}
+,a:hover{
+    text-shadow: 1px 1px 1px #030303;
+    color: #080808;
+}
+a:hover::before{
+    top:calc((0rem - 30px)/2);
+    left:calc((2rem - 30px)/2);
+    width: 2rem;
+    height: 2rem;
+    opacity: 1;
+}
+a:hover::after{
+    top:calc((1rem - 22.5px)/2);
+    left:calc((3rem - 22.5px)/2);
+    width: 1.5rem;
+    height: 1.5rem;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+.footer_bg {
+   background: linear-gradient(to top,rgba(0, 0, 0, 0.7),rgba(221, 185, 185, 0));
+   
+   color: white;
+}
+
+.error_li li{
+    color: red;
+    text-shadow: 1px 3px 5px  #221e1e;
+} 
