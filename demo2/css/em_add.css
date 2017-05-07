@@ -1,0 +1,23 @@
+#em_add_content{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#em_add_content table{
+    margin: 2rem auto 0 auto;
+    color: aliceblue;
+    line-height: 1.5rem;
+    
+}
+#em_add_content input{
+    font-size: 1.5rem;
+    background-color: rgba(219, 217, 217, 0.57);
+    padding-left: 10px;
+    border-radius: 1rem;
+    color: aliceblue;
+}
+
+#em_employee_radio,#em_manager_radio,#em_sys_checkbox{
+    width: 0.7rem;
+    height: 0.7rem;
+}

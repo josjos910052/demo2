@@ -1,0 +1,45 @@
+html{
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100%;
+    width: 100%;
+    min-width: 20rem;
+    min-height: 80%;
+    max-height: 100%;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight:500;
+}
+.panel-heading{
+    font-size: 1rem!important;
+    text-align: left;
+    padding-left: 30px;
+}
+.form label{
+    font-size: 1rem!important;
+}
+.form input{
+    font-size: 1rem!important;
+}
+.error-msg label{
+    font-size: 0.7rem!important;
+}
+.btn-success{
+    font-size: 0.7rem!important; 
+}
+table{
+    display: inline-block;
+    margin: 3rem auto;
+    font-size: 1rem;
+    
+}
+table tr td input{
+    font-size: 1rem;
+}

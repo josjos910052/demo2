@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>員工工時查詢</title>
+    <link rel="stylesheet" type="text/css" href="css/%E5%93%A1%E5%B7%A5%E5%B7%A5%E6%99%82%E6%9F%A5%E8%A9%A2.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+	<script src="js/%E5%93%A1%E5%B7%A5%E5%B7%A5%E6%99%82%E6%9F%A5%E8%A9%A2.js"></script>
+</head>
+<body>
+    <div id='e_s_wt'>
+<!--       搜尋區塊-->
+        <div id="e_s_wt_select_div">
+            <input id="e_s_wt_month" type="month">
+            <input id='e_s_wt_search_btn' type="button" value="查詢">
+        </div>
+    <!--        搜尋結果區塊-->
+        <div id="e_s_wt_result_div">
+            <div id="wt_div" class="worktime_div">
+        
+<!--          min-w:40rem     工時標題-->
+               <div class='wt_title'>
+                   <span>日期</span><span>員編</span><span>姓名</span><span>星期日</span><span>星期一</span><span>星期二</span><span>星期三</span><span>星期四</span><span>星期五</span><span>星期六</span>
+               </div>
+
+<!--                每周工時資料-->
+               <ul>                      
+                    <li class="worktime_data_li" firstDay='4/1'>
+    <!--                   簡-工時資料-->
+                        <div class="wt_header_div">
+                            <span>4/1~4/7</span><span>000000</span><span>王曉明</span><div class="wt_header_time holiday" day='0'><span></span><span></span></div><div class="wt_header_time" day='1'><span>8</span><span>0</span></div><div class="wt_header_time" day='2'><span>8</span><span>0</span></div><div class="wt_header_time" day='3'><span>8</span><span>0</span></div><div class="wt_header_time holiday" day='4' hd_time='4'><span>8</span><span>0</span></div><div class="wt_header_time" day='5'><span>8</span><span>0</span></div><div class="wt_header_time holiday" day='6'><span></span><span></span></div>
+                        </div>
+
+    <!--                    詳細工時資料-->
+                        <div class="wt_detail" style="display:none">
+                            <div class="wt_detail_div">
+                                <table>
+    <!--                          詳-工時標題-->
+                                   <tr>
+                                       <td>專編</td>
+                                       <td colspan="3">工作內容</td>
+                                       <td>日</td>
+                                       <td>一</td>
+                                       <td>二</td>
+                                       <td>三</td>
+                                       <td>四</td>
+                                       <td>五</td>
+                                       <td>六</td>
+                                   </tr>
+        <!--                           詳-工時內容-->
+                                   <tr>
+                                       <td><input type="text" value='08001'></td>
+                                       <td colspan="3"><textarea>不知道要打什麼</textarea></td>
+                                       <td class="holiday"></td>
+                                       <td><input type="number" max="8" min="0" placeholder="平常" value='4'><input type="number" max="4" min="2" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='1'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='4'></td><td class='holiday'></td>
+                                   </tr>
+                                   <tr>
+                                   <td><input type="text" value='08000'></td>
+                                   <td colspan="3"><textarea>這個也是不知道要打什麼阿</textarea></td>
+                                   <td class="holiday"></td>
+                                   <td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='4'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'></td>
+                               </tr>
+                               </table>
+                            </div>
+
+                        </div>
+
+                    </li>
+                    <li class="worktime_data_li">
+    <!--                   簡-工時資料-->
+                        <div class="wt_header_div">
+                            <span>4/8~4/14</span><span>000000</span><span>王曉明</span><div class="wt_header_time holiday"><span></span><span></span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time holiday"><span></span><span></span></div>
+                        </div>
+
+    <!--                    詳細工時資料-->
+                        <div class="wt_detail" style="display:none">
+                           <div class="wt_detail_div">
+                               <table>
+    <!--                          詳-工時標題-->
+                                   <tr>
+                                       <td>專編</td>
+                                       <td colspan="3">工作內容</td>
+                                       <td class="holiday">日</td>
+                                       <td>一</td>
+                                       <td>二</td>
+                                       <td>三</td>
+                                       <td>四</td>
+                                       <td>五</td>
+                                       <td  class="holiday">六</td>
+                                   </tr>
+        <!--                           詳-工時內容-->
+                                   
+                               </table>
+                           </div>
+
+                        </div>
+
+                    </li>
+                    <li class="worktime_data_li">
+    <!--                   簡-工時資料-->
+                        <div class="wt_header_div">
+                            <span>4/15~4/21</span><span>000000</span><span>王曉明</span><div class="wt_header_time holiday"><span></span><span></span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time holiday"><span></span><span></span></div>
+                        </div>
+
+    <!--                    詳細工時資料-->
+                        <div class="wt_detail" style="display:none">
+                           <div class="wt_detail_div">
+                               <table>
+    <!--                          詳-工時標題-->
+                                   <tr>
+                                       <td>專編</td>
+                                       <td colspan="3">工作內容</td>
+                                       <td>日</td>
+                                       <td>一</td>
+                                       <td>二</td>
+                                       <td>三</td>
+                                       <td>四</td>
+                                       <td>五</td>
+                                       <td>六</td>
+                                   </tr>
+        <!--                           詳-工時內容-->
+                                   <tr>
+                                       <td><input type="text" value='08000'></td>
+                                       <td colspan="3"><textarea>這個也是不知道要打什麼阿</textarea></td>
+                                       <td class="holiday"></td>
+                                       <td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='4'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'></td>
+                                   </tr>
+                               </table>
+                           </div>
+
+                        </div>
+
+                    </li>
+               </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
