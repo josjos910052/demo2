@@ -31,7 +31,9 @@ ul li{
     display: inline-block;
 }
 
-
+h1{
+    margin:0.5rem 0;
+}
 /*整體工時區塊*/
 
 .worktime_div{
@@ -40,7 +42,7 @@ ul li{
     min-width: 40rem;
     height: 70%;
     
-    margin-top: 10%;
+    margin-top:1.5rem;
     border-radius: 1rem;
 }
 .worktime_div>ul{

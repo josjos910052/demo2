@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>催繳工時</title>
+	
+	<link href="css/workTime.css" rel="stylesheet"/>
+	<link href="css/bootstrap.css" rel="stylesheet"/>
+	
+	
+     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css">
+     
+     <script src="js/jquery-1.9.0.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
+     
+     <script>
+         $(function(){$('.btn_alert').click(function(){
+          swal('催繳成功', '', 'success');
+         });
+        });      
+        
+    </script>
+	
+</head>
+<body style="background:none; text-align: center;">
+       <h1>工時催繳</h1><hr>
+
+    <div id="table_div">
+        
+        <table class="table table-hover table-bordered table-text" >
+
+            
+            <thead>
+                <tr class="table_tr_text">
+                    <th>日期</th>
+                    <th>員工編號</th>
+                    <th>員工姓名</th>
+                    <th>催繳</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0001</td>
+                <td>王曉明</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+            </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0002</td>
+                <td>王大頭</td>
+                <td><button type="submit" class="bn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0003</td>
+                <td>阿杜</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0004</td>
+                <td>ANDY</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0005</td>
+                <td>郭富城</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0006</td>
+                <td>張學友</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0007</td>
+                <td>劉德華</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+            <tr>
+                <td>2017/05/01</td>
+                <td>0008</td>
+                <td>周星馳</td>
+                <td><button type="submit" class="btn_alert">催繳</button></td>
+                </tr>
+        </table>
+    </div>
+
+    <button type="submit" class="btn_alert" id="btn_all" >全部催繳</button>
+
+</body>
+</html>

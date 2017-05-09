@@ -1,4 +1,31 @@
 $(function(){
+    //測試區塊 非正是
+    $('#test input').change(function(){
+        var status=$(':input[name="s"]:checked').val(),
+            sys_s=$(':input[name="sys"]:checked');
+        var $top_m=$('#main_menu_div ul li'),
+            $menu=$('#content_menu_div ul li');
+        if(status=='e'){
+            $('.w_wt_li,.em_s_wt_li').show();
+            $('.m_wt_li,.m_s_wt_li').hide();
+        }else{
+            $('.m_wt_li,.m_s_wt_li').show();
+            $('.w_wt_li,.em_s_wt_li').hide();
+        }
+        if(sys_s.length==1){
+            $('.hd_li,.e_manage_li').show();
+            $('#content_menu_div ul').css({
+               width:'65%'
+            });
+        }else{
+            $('.hd_li,.e_manage_li').hide();
+            $('#content_menu_div ul').css({
+               width:'80%',
+                'margin-top':'6rem'
+            });
+        }
+    });
+    
     main_menu_link();
    
     

@@ -2,11 +2,28 @@ $(function(){
     $date=$('#hd_input_month');
     hd_make($date);
     
+    $('#hd_ul li').on('click',function(){
+        var id=$(this).attr('id');
+        if(!$(this).hasClass('hd_li_sel')){
+            $(this).addClass('hd_li_sel').parent().siblings().find('li').removeClass('hd_li_sel');
+        }
+        if('hd_tab2'==id||'hd_tab3'==id){
+            $('#cover_div').show().fadeIn(500);
+        }else{
+            $('#cover_div').stop().fadeOut(300).hide(0);
+        }
+        
+    });
+    $('#hd_submit').on('click',function(){
+        $('#hd_modify_cover_div').hide();
+        $('#cover_div').stop().show();
+    });
+    
+    /*日期input*/
     $('#hd_input_month').change(function(){
         hd_make($(this));
         
     });
-    
     $('#hd_n_month').on('click',function(){
         var $d=$('#hd_input_month');
        var date= $d.val();

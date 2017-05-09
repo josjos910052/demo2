@@ -7,11 +7,32 @@ html{
     overflow-y: hidden;
 }
 body{
-    padding:0;
-    margin: 0;
     height:100%;
 	width:100%;
 	text-align: center;
+    padding:0;
+    margin: 0;
+}
+
+#cover_div{
+	position:fixed;
+	top: 0;
+	left: 0;
+
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(129, 129, 129, 0.2);
+}
+#cover_div iframe{
+	position: relative;
+	top:20%;
+    width: auto;
+    height: auto;
+    border: none;
+    overflow: hidden;
+    border-radius: 
+    box-shadow:1px 1px 10px 5px  #9f9f9f;
 }
 table{
     width: 80%;
@@ -29,6 +50,19 @@ form{
 input{
     font-size: 1rem;
     text-align: center;
+    
+}
+
+
+
+input:disabled{
+	background:none;
+	border:none; 
+	color:black;
+
+}
+tr:last-child td>input{
+	margin:0px 10px;
 }
 #e,#m,#s{
     display: inline-block;
@@ -36,16 +70,13 @@ input{
     height: 0.7rem;
 }
 #submit{
+    margin-right: 30px;
+}
+#submit,#cancel{
     margin-top: 1.5rem;
 }
-
 .bg_b_cl_w{
     background-color: #e5e5e5;
     color: black;
 }
-#e_id:disabled{
-    border: none;
-    background: none;
-}
-
 

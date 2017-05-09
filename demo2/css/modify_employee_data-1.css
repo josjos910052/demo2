@@ -1,16 +1,11 @@
 html{
-	height:100%;
-	width:100%;
+    height: auto;
+    width: auto;
     font-size: 25px;
-    padding:0;
-    margin: 0;
-    overflow-y: hidden;
 }
 body{
-    padding:0;
-    margin: 0;
-    height:100%;
-	width:100%;
+height:100%;
+	width:99%;
 	text-align: center;
 }
 table{
@@ -26,11 +21,31 @@ td{
 form{
 	 margin:15px auto 0 auto;
 }
+#cover_div{
+	position:fixed;
+	top: 0;
+	left: 0;
+
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(129, 129, 129, 0.2);
+}
+#cover_div iframe{
+	position: relative;
+	top:20%;
+    width: auto;
+    height: auto;
+    border: none;
+    overflow: hidden;
+    border-radius: 
+    box-shadow:1px 1px 10px 5px  #9f9f9f;
+}
 input{
     font-size: 1rem;
     text-align: center;
 }
-#e,#m,#s{
+#rd1,#rd2,#cb1{
     display: inline-block;
     width: 0.7rem;
     height: 0.7rem;
@@ -38,7 +53,6 @@ input{
 #submit{
     margin-top: 1.5rem;
 }
-
 .bg_b_cl_w{
     background-color: #e5e5e5;
     color: black;
@@ -47,5 +61,6 @@ input{
     border: none;
     background: none;
 }
+
 
 

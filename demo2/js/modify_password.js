@@ -1,4 +1,3 @@
-
 jQuery.extend(jQuery.validator.messages, {
 	required: "此欄位必填.",
 	remote: "Please fix this field.",
@@ -17,32 +16,11 @@ jQuery.extend(jQuery.validator.messages, {
 	max: $.validator.format("請輸入小於等於 {0} 的值."),
 	min: $.validator.format("請輸入大於等於 {0} 的值.")
 });
+//覆蓋原本英文的錯誤訊息
+jQuery.validator.addMethod("new-pw", function( value, element ) {
+    return (
+    /^[a-zA-Z0-9]{2,16}$/.test(value) /*檢查是否只有英文與數字*/
+    && /[a-zA-Z]{1,16}/.test(value)     /*檢查是否包含英文*/
+    && /[0-9]{1,16}/.test(value));       /*檢查是否包含數字*/
 
-
-
-    jQuery.validator.addMethod("form-control", function( value, element ) {
-	var str = value;
-	var result = false;
-
-	if(str.length > 0){
-		var patt = /^[a-zA-Z0-9]{2,16}$/;
-		var result1 = patt.test(str);
-		//先測試是否有英文
-		var pattEN = /[a-zA-Z]{1,}/;
-		result2 = pattEN.test(str);
-		//先測試是否有數字
-		var pattDigit = /[0-9]{1,}/;
-		result3 = pattDigit.test(str);
-
-		if(result1 == true && result2 == true && result3 == true){
-			result = true;
-		} else{
-			result = false;
-		}
-	} else {
-		result = true;
-	}
-	return result;
-}, "密碼不得為空且是16個字元的英文字母、數字混合，但不含空白鍵及標點符號。");
-
-$
+}, "密碼不得為空且是16個字元的英文字母、數字混合，但不含空白鍵及標點符號。"/*回傳錯誤訊息   ,append(error)*/);

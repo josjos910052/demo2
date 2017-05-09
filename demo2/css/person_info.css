@@ -15,7 +15,16 @@ body{
     text-align: center;
 }
 
-#personInfo h1{
+
+
+#title {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px ;
+    color: #000000;
+    text-shadow: 1px 1px 5px #959191;
+}
+#title h1{
     margin: 0;
 }
 #personInfo{
@@ -24,7 +33,7 @@ body{
     height: auto;
     text-align: center;
     margin: 0 5%;
-    box-shadow:10px 10px 40px rgba(74%, 74%, 79%, 0.5);
+    box-shadow:10px 10px 40px rgba(42%, 42%, 42%, 0.5);
     overflow: hidden;
     border-radius: 2%;
     border: 3px rgba(152, 152, 152, 0.47) solid;
@@ -35,17 +44,8 @@ body{
     display:inline-block; 
     height: 100%;
     width:100%;
-    background-color: rgba(23, 23, 25, 0.81);
+    background-color: rgb(255, 255, 255);
     text-align: center;
-}
-
-
-
-#title {
-    display: inline-block;
-    width: 100%;
-    margin: 1rem 0;
-    color: aliceblue;
 }
 
 #info_content{
@@ -55,7 +55,7 @@ body{
     height: auto;
 }
 #info_content table{
-    margin: 0 auto;
+    margin: 0 auto 1.5rem auto;
     text-align: center;
     height: 100%;
     width: 90%;
@@ -64,9 +64,9 @@ body{
 #info_content table td{
     height: 100%;
     width: auto;
-    border: 1px rgb(185, 127, 178) double;
-    background-color: black;
-    color: floralwhite;
+    border: 1px rgb(15, 15, 15) double;
+    background-color: #ffffff;
+    color: #000000;
     margin: 0;
 }
 #info_content tr input{
@@ -75,9 +75,13 @@ body{
     width: 100%;
     
     border: none;
-    background-color:black;
-    color: floralwhite;
+    background-color:#ffffff;
+    color: #000000;
     font-size: 1rem;
+}
+#info_content tr input:disabled{
+    background-color: none;
+    color:black;
 }
 #state_sel{
     height: 100%;
@@ -87,68 +91,13 @@ body{
     display: none;
 }
 
-#state_sel label{
-    height: 100%;
-    width: 50%;
-    float: left;
-    line-height:100%;
-    margin: auto 0;
-}
-#state_sel label input{
-    height: 70%;
-    width: 30%;
-    
-    margin:auto 0;
-}
-
-
-#check{
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    
-    
-    background-color: rgba(0, 0, 0, 0.54);
-    top: 0;
-    left: 0;
-    z-index: 30;
-}
-
-#check div{
-    height: 30%;
-    margin:35%;
-    
-    color: azure;
-    z-index: 50;
-}
-#check input{
-    float: left;
-    width: 50%;
-    background: none;
-    color: aliceblue;
-    font-size: 0.8rem;
-    
-}
-#modify{
-    width: 100%;
-}
-#modify input{
-    height: 2rem;
-    width: 20%;
-    margin: 0.5rem;
-    
-    color: aliceblue;
-    font-size: 1rem;
-    
-    background: none
-}
 
 #close{
     position:relative;
     cursor: pointer;
     height: 1rem;
     width: 1rem;
-    color: aliceblue;
+    color: #030303;
 }
 
 #close:hover{
