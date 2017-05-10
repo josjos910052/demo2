@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>員工新增</title>
+    <link rel="stylesheet" type="text/css" href="css/em_add.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+	<script src="js/em_add.js"></script>
+</head>
+<body>
+    <div id='em_add_content'>
+    <table>
+        <tr>
+            <td>姓名</td>
+            <td><input id='em_add_name' type='text'></td>
+        </tr>
+        <tr id="em_add_id_number">
+            <td>身分證字號</td>
+            <td><input type='text'></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input id='em_add_email' type='email'></td>
+        </tr>
+        <tr>
+            <td>職位</td>
+            <td><input id='em_employee_radio' name='em_position' type='radio'><label for='em_employee_radio'>員工</label>
+            
+            <input id='em_manager_radio' name='em_position' type='radio'><label for='em_manager_radio'>主管</label>
+            
+            <input id='em_sys_checkbox' type='checkbox'><label for='em_sys_checkbox'>系統管理員</label> </td>
+        </tr>
+        <tr>
+           <td colspan="2">
+               <input type="button" value="新增">
+           </td>
+        </tr>
+    </table>
+    
+<!--暫時捷徑 -->
+    <p><a href="%E5%93%A1%E5%B7%A5%E5%95%9F%E5%8B%95.html" target="_blank">員工信箱捷徑(員工啟動)</a></p>
+    
+    
+</div>
+
+
+</body>
+</html>

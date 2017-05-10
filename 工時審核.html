@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>工時審核</title>
+    <link rel="stylesheet" type="text/css" href="css/%E5%B7%A5%E6%99%82%E5%AF%A9%E6%A0%B8.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script src="js/%E5%B7%A5%E6%99%82%E5%AF%A9%E6%A0%B8.js"></script>
+</head>
+<body>
+    <h1>工時審核</h1><hr>
+   <form id='search_form' action='#'>
+      <input type="week">
+       <select>
+           <option>員工編號</option>
+           <option>員工姓名</option>
+       </select>
+       <input type="text">
+       <input type="submit" value="查詢">
+   </form>
+    <div id="m_wt_div" class="worktime_div">
+        <div id="m_wt_title_div" class='wt_title'>
+               <span>日期</span><span>員編</span><span>姓名</span><span>星期日</span><span>星期一</span><span>星期二</span><span>星期三</span><span>星期四</span><span>星期五</span><span>星期六</span><span>全選</span>
+        </div>
+        <ul>
+            <li class="worktime_data_li" firstDay='4/1'>
+<!--                   簡-工時資料-->
+                    <div class="wt_header_div">
+                        <span>4/1~4/7</span><span>000000</span><span>王曉明</span><div class="wt_header_time holiday" day='0'><span></span><span></span></div><div class="wt_header_time" day='1'><span>8</span><span>0</span></div><div class="wt_header_time" day='2'><span>8</span><span>0</span></div><div class="wt_header_time" day='3'><span>8</span><span>0</span></div><div class="wt_header_time holiday" day='4' hd_time='4'><span>8</span><span>0</span></div><div class="wt_header_time" day='5'><span>8</span><span>0</span></div><div class="wt_header_time holiday" day='6'><span></span><span></span></div><div><input type='checkbox' name='checkbox' value="000000"></div>
+                    </div>
+                    
+<!--                    詳細工時資料-->
+                    <div class="wt_detail" style="display:none">
+                        <div class="wt_detail_div">
+                            <table>
+<!--                          詳-工時標題-->
+                           <tr>
+                               <td>專編</td>
+                               <td colspan="3">工作內容</td>
+                               <td>日</td>
+                               <td>一</td>
+                               <td>二</td>
+                               <td>三</td>
+                               <td>四</td>
+                               <td>五</td>
+                               <td>六</td>
+                           </tr>
+<!--                           詳-工時內容-->
+                           <tr>
+                               <td><input type="text" value='08001'></td>
+                               <td colspan="3"><textarea>不知道要打什麼</textarea></td>
+                               <td class="holiday"></td>
+                               <td><input type="number" max="8" min="0" placeholder="平常" value='4'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='1'></td><td><input type="number" max="8" min="0" placeholder="平常" value='5'><input type="number" max="4" min="0" placeholder="加班" value='4'></td><td class='holiday'></td>
+                           </tr>
+                           <tr>
+                               <td><input type="text" value='08000'></td>
+                               <td colspan="3"><textarea>這個也是不知道要打什麼阿</textarea></td>
+                               <td class="holiday"></td>
+                               <td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='4'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'></td>
+                           </tr>
+                           </table>
+                        </div>
+                       
+                       
+                       
+                       
+<!--                       新增專案/暫存/提交-->
+                        <div class="m_wt_btn_div">
+                            <input type="submit" class='m_wt_btn m_wt_btn_ok' value="通過">
+                            
+                            <input type="submit" class='m_wt_btn m_wt_btn_notok' value="不通過">
+                            <textarea class='m_wt_R_textarea' placeholder="請輸入未通過原因"></textarea>
+                        </div>
+                    </div>
+                
+                </li>
+            <li class="worktime_data_li">
+<!--                   簡-工時資料-->
+                    <div class="wt_header_div">
+                        <span>4/1~4/7</span><span>000001</span><span>阿杜</span><div class="wt_header_time holiday"><span></span><span></span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time holiday"><span></span><span></span></div><div><input type='checkbox' name='checkbox' value='000001'></div>
+                    </div>
+                    
+<!--                    詳細工時資料-->
+                    <div class="wt_detail" style="display:none">
+                       <div class="wt_detail_div">
+                           <table>
+<!--                          詳-工時標題-->
+                           <tr>
+                               <td>專編</td>
+                               <td colspan="3">工作內容</td>
+                               <td >日</td>
+                               <td>一</td>
+                               <td>二</td>
+                               <td>三</td>
+                               <td>四</td>
+                               <td>五</td>
+                               <td >六</td>
+                           </tr>
+<!--                           詳-工時內容-->
+                       </table>
+                       </div>
+                       
+                       
+                       
+                       
+<!--                       新增專案/暫存/提交-->
+                        <div class="m_wt_btn_div">
+                            <input type="submit" class='m_wt_btn m_wt_btn_ok' value="通過">
+                            
+                            <input type="submit" class='m_wt_btn m_wt_btn_notok' value="不通過">
+                            <textarea class='m_wt_R_textarea' placeholder="請輸入未通過原因"></textarea>
+                        </div>
+                    </div>
+                
+                </li>
+            <li class="worktime_data_li">
+<!--                   簡-工時資料-->
+                    <div class="wt_header_div">
+                        <span>4/1~4/7</span><span>000002</span><span>李聖傑</span><div class="wt_header_time holiday"><span></span><span></span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time"><span>8</span><span>0</span></div><div class="wt_header_time holiday"><span></span><span></span></div><div><input type='checkbox' name='checkbox' value='000002'></div>
+                    </div>
+                    
+<!--                    詳細工時資料-->
+                    <div class="wt_detail" style="display:none">
+                       <div class="wt_detail_div">
+                           <table>
+<!--                          詳-工時標題-->
+                           <tr>
+                               <td>專編</td>
+                               <td colspan="3">工作內容</td>
+                               <td>日</td>
+                               <td>一</td>
+                               <td>二</td>
+                               <td>三</td>
+                               <td>四</td>
+                               <td>五</td>
+                               <td>六</td>
+                           </tr>
+<!--                           詳-工時內容-->
+                           <tr>
+                               <td><input type="text" value='08000'></td>
+                               <td colspan="3"><textarea>這個也是不知道要打什麼阿</textarea></td>
+                               <td class="holiday"></td>
+                               <td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'><input type="number" max="4" min="0" placeholder="平常" value='4'><input type="number" max="4" min="0" placeholder="加班" value='3'></td><td><input type="number" max="8" min="0" placeholder="平常" value='3'><input type="number" max="4" min="0" placeholder="加班" value='0'></td><td class='holiday'></td>
+                           </tr>
+                       </table>
+                       </div>
+                       
+                       
+                      
+<!--                       新增專案/暫存/提交-->
+                        <div class="m_wt_btn_div">
+                            <input type="submit" class='m_wt_btn m_wt_btn_ok' value="通過">
+                            
+                            <input type="submit" class='m_wt_btn m_wt_btn_notok' value="不通過">
+                            <textarea class='m_wt_R_textarea' placeholder="請輸入未通過原因"></textarea>
+                        </div>
+                    </div>
+                
+                </li>
+        </ul>
+    </div>
+    <div id='m_wt_btn_div'><input type="button" value='通過'></div>
+</body>
+</html>
