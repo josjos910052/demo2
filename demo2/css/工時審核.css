@@ -1,5 +1,5 @@
 html{
-    font-size: 30px;
+    font-size: 20px;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -57,7 +57,7 @@ ul li{
     
 }
 #search_form *{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 /*簡－工時標題*/
 .wt_title{

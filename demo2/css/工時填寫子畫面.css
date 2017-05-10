@@ -1,0 +1,44 @@
+html{
+    font-size: 20px;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+}
+h1{
+    margin: 0.7rem 0;
+}
+
+
+table{
+    width: 80%;
+    margin: 0 auto;
+}
+
+input{
+    font-size: 0.8rem;
+    text-align: center;
+}
+input:disabled{
+    background: none;
+    border: none;
+}
+td{
+    border: 1px solid black;
+}
+
+textarea{
+    font-size: 0.8rem;
+}
+
+
+.bg_color{
+    background-color: #ebebeb;
+}

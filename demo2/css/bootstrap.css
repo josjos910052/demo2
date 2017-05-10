@@ -27,6 +27,7 @@ th {
   }
   thead {
     display: table-header-group;
+      background-color: black;
   }
   tr,
   .table {
@@ -110,7 +111,7 @@ caption {
 .table-bordered > thead > tr > td,
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
-  border: 1px solid #ddd;
+  border: 1px solid #000000;
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
@@ -118,5 +119,16 @@ caption {
 }
 
 .table-hover > tbody > tr:hover {
-  background-color: #f5f5f5;
+  background-color: #c1c1c1;
+}
+.thead{
+    background-color: black;
+    color:white;
+    font-size: 30px;
+   
+}
+.table{
+    background-color: white;
+    font-size: 20px;
+    font-weight: 900;
 }

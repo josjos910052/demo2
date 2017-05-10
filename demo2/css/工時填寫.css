@@ -1,14 +1,15 @@
 html{
-    font-size: 30px;
+    font-size: 20px;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
+    
 }
 body{
     height: 100%;
     width: 100%;
-    min-width: 20rem;
+    min-width: 1060px;
     min-height: 80%;
     max-height: 100%;
 /*
@@ -68,25 +69,49 @@ h1{
     height:auto;
     min-height: 1.5rem;
     line-height: 1.5rem;
-    border-bottom: 1px red solid;
     border-radius: 0.5rem;
-    background-color: black;
-}
-.wt_title *{
-    display: inline-block;
-    width: calc(100%/11 - 1px);
-    min-width: 3.53rem;
-    border-right: 1px red solid;
     
+}
+.wt_header_div{
+    display: inline-block;
+    width: 100%;
+}
+.wt_title table{
+    width: 100%;
+    min-width: 44rem;
+}
+.wt_title td{
+    width: calc(100%/11 - 1px);
+    min-width: 4rem;
+    border-radius: 5px;
+    background-color: black;
     color: aliceblue;
     
 }
+.wt_header_div table{
+    width: 100%;
+}
+.wt_header_div table tr{
+    width: 100%
+}
+.wt_header_div td{
+    width: calc(100%/11 - 1px);
+    min-width: 4rem;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.wt_header_div td div{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
 
 /*簡－單筆工時*/
 .worktime_data_li{
-    width: 100%;
+    width: 44rem;
     height: 1.5rem;
-    
+    min-width: 44rem;
     cursor: pointer;
     border-radius: 1rem;
     overflow: hidden;
@@ -97,16 +122,7 @@ h1{
 }
 
 
-.wt_header_div>*{
-    display:inline-block;
-    width: calc(100%/11 - 1px);
-    min-width: 3.53rem;
-    height: 1.5rem;
-    float: left;
-    line-height: 1.5rem;
-    border-right: 1px red solid;
-    border-bottom:  1px red solid;
-}
+
 
 .wt_header_time *{
     display: inline-block;
@@ -203,7 +219,7 @@ h1{
 
 /*假日*/
 .holiday{
-    background-color: rgba(253, 76, 76, 0.63);
+    background-color: rgba(253, 76, 76, 0.63)!important;
 }
 
 
