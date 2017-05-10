@@ -8,37 +8,11 @@
     <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.css">
     <script src="js/jquery-1.9.0.min.js"></script>
 
-    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    
     <script type="text/javascript" src="js/modify_password.js"></script>
     <script src="https://cdn.jsdelivr.net/sweetalert2/6.6.2/sweetalert2.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-      	//自己這個站的 js
-      	$(".form").validate({
-      		submitHandler: function(form) {
-      			// form.submit();
-                     swal(
-                     '密碼變更成功',
-                     '',
-                     'success'
-                     )
-      		}/*驗證成功所做的事情*/,
-      		errorPlacement: function(error, element) {
-      			element.next('.error-msg').append(error);
-      		}/*錯誤訊息的處理方式*/,
-            rules: {
-                old_pw: {
-                    required: true,
-                    
-                },
-                user_pwd_again: {
-                    equalTo: '#user-pwd-input'
-                }
-            }/*驗證規則*/,
-      	});
-      
-      });
-    </script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/ready_modify.js"></script>
   </head>
   <body style="font-family: 'Noto Sans TC', sans-serif; font-weight:500;">
     <div class="header"></div>
