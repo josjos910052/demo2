@@ -52,7 +52,7 @@ function main_menu_link(){
     //首頁
     $('.home_li').on('click',function(){
         $('#content_menu_div').show().siblings().hide();
-        $('#main_menu_div>h1').show().siblings().hide();
+        $('#main_menu_div>div').show().siblings().hide();
     });
     //變更密碼
     $('.change_pw_li').on('click',function(){

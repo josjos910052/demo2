@@ -145,17 +145,17 @@ function hd_make($date){
         if(index<start_day){
             $(this).find('input').attr('date',year+'-'+(month-1)+'-'+p_date);
             $span.text(p_date++).css({                
-                color:'rgba(145, 152, 144, 0.62)'
+                color:'rgba(100, 100, 100, 0.7)'
             });    
         }else if(index<end_date+start_day){
             $(this).find('input').attr('date',year+'-'+month+'-'+now_date);
             $span.text(now_date++).css({
-                color:'rgba(42, 184, 196, 0.24)'
+                color:'rgba(60, 60, 60, 0.89)'
             });    
         }else{
             $(this).find('input').attr('date',year+'-'+(month+1)+'-'+n_date);
             $span.text(n_date++).css({
-                color:'rgba(124, 137, 123, 0.7)'
+                color:'rgba(100, 100, 100, 0.7)'
             });    
         }
         
