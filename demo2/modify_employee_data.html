@@ -1,20 +1,19 @@
-<!DOCtype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>修改員工資料</title>
     <link rel="stylesheet" href="css/modify_employee_data.css"type="text/css">
 </head>
 <body>
-
-
-	<h1>修改員工資料</h1>
+    <h1>修改員工資料</h1>
 	<hr>
-	<form action="">
-		<select>
-			<option>員工姓名</option>
-			<option>員工編號</option>
+	<form action='modify_employee_data.html'>
+		<select name='by'>
+			<option value='name'>員工姓名</option>
+			<option value='id'>員工編號</option>
 		</select>
-		<input type="text">
+		<input type="text" name='input'>
 		<input type="submit" value="查詢">
 	</form>
 
@@ -45,21 +44,6 @@
 			<td><a href="modify_employee_data-1.html?id=000002"><input name="md"type="button" value="修改"> </a></td>  
 		</tr>
 	</table>
-
-
-
-
-
-
 </body>
-
-
-
-
-
-
-
-
-
-
 </html>
+

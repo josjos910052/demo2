@@ -37,6 +37,9 @@ h1{
     font-size: 0.7rem;
     font-weight: bold;
 }
+#m_s_wt_select_div select{
+    font-size: 0.9rem;
+}
 #m_s_wt_month{
     display:inline-block;
     height: 1.5rem;
@@ -72,166 +75,57 @@ display: none; -webkit-appearance: none;
 
 
 /*搜尋結果區塊*/
-#m_s_wt_result_div{
-    display: inline-block;
-    width: 95%;
-    height: calc(85% - 3rem - 6px);
-}
-ul{
-    text-align: center;
-    margin: 0;
-    padding: 0;
+table{
+    width: 85%;
+    margin: 10px auto;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 10px 2px #9d9d9d;
     
 }
-ul li{
-    display: inline-block;
-}
-
-/*整體查詢工時區塊*/
-.worktime_div{
-    display:inline-block;
-    width: 90%;
-    min-width: 40rem;
-    height: 80%;
-    border-radius: 1rem;
-}
-.worktime_div>ul{
-    display:inline-block;
-    width: 100%;
-    min-width: 40rem;
-    height: calc(100%);
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-.worktime_div >ul>li{
-    width: 100%;
-    min-width: 40rem;
-}
-
-
-/*簡－工時標題*/
-.wt_title{
-    display: inline-block;
-    width: 100%;
-    height:auto;
-    max-height: 1.5rem;
-    line-height: 1.5rem;
-    border-bottom: 1px red solid;
-    border-radius: 0.5rem;
+thead tr{
     background-color: black;
 }
-.wt_title *{
-    display: inline-block;
-    width: calc(100%/10 - 1px);
-    min-width: 3.53rem;
-    border-right: 1px red solid;
-    
-    color: aliceblue;
-    
+thead td{
+    outline:1px solid #ffffff;;
+    color: white;
 }
 
-/*簡－單筆工時*/
-.worktime_data_li{
-    width: 99%;
-    height: 1.5rem;
-    
-    cursor: pointer;
-    border-radius: 7px;
+
+tbody tr:hover,.select{
+    background-color: #d3d3d3!important;
+}
+tbody tr:hover .holiday,.select .holiday{
+    background-color: rgb(226, 186, 186);
+}
+
+tbody td{
+    outline: 1px solid black;
+}
+tbody td span{
+    display: inline-block;
+    width: 40%;
+}
+
+
+/*詳細區*/
+#cover_div{
+	position:fixed;
+	top: 0;
+	left: 0;
+
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(129, 129, 129, 0.2);
+}
+#cover_div iframe{
+	position: relative;
+	top:10%;
+    width: 70%;
+    height: 70%;
+    border: none;
     overflow: hidden;
-    
-    background-color: #ffffff;
-    box-shadow: 1px 1px 10px 1px #5f5f5f;
-    transition: height 0.5s;
-}
-
-.wt_header_div>div>input {
-    width: 1rem;
-    height: 1rem;
-}
-.wt_header_div>*{
-    display:inline-block;
-    width: calc(100%/11 - 1px);
-    border-right: 1px black solid;
-    min-width: 3.53rem;
-    height: 1.5rem;
-    float: left;
-    line-height: 1.5rem;
-}
-.wt_header_time *{
-    display: inline-block;
-    width: 50%;
-    min-width: 1.5rem;
-    height: auto;
-    float: left;
-    line-height: 1.5rem;
-}
-
-/*詳-工時填寫區塊*/
-.wt_detail{
-    display: inline-block;
-    width: 100%;
-    height: calc(1.5rem + 1.5rem + 3rem*3 + 3rem);
-    
-    cursor:auto;
-    min-height: calc(1.5rem + 2rem*3);
-    
-}
-
-
-
-/*詳-工時填寫內容(專案)*/
-.wt_detail_div{
-    display: inline-block;
-    width: 99%;
-    height: calc(1.5rem + 3rem*3);
-    border-top: 1px #000000 solid;
-    border-bottom: 1px #000000 solid;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background-color: azure;
-}
-.wt_detail_div :disabled{
-    
-    background-color: rgba(167, 167, 167, 0.25);
-}
-.wt_detail table{
-    width: 98%;
-    height: auto;
-    margin: 20px auto 2rem auto;
-    background-color: black;
-    box-shadow: 5px 5px 30px 2px #676767;
-}
-.wt_detail table tr{
-    height: 2rem;
-    max-height: 2rem;
-    background-color: #ffffff;
-}
-.wt_detail table tr td{
-    min-width: 5rem;
-}
-.wt_detail table tr:first-child{
-    height: 1.5rem;
-    color: #000000;
-    background-color: #c1c1c1;
-}
-.wt_detail table td:nth-child(2){
-    min-width: calc(3.53rem*3);
-}
-.wt_detail table input{
-    max-width: 4rem;
-    font-size: 1rem;
-    text-align: center;
-}
-.wt_detail textarea{
-    margin: 0;
-    width: 90%;
-    font-size: 1rem;
-}
-
-
-/*不能寫區塊*/
-.wt_detail_div :disabled{
-    background-color: rgba(240, 248, 255, 0.46);
+    box-shadow:3px 3px 10px 5px  #656565;
 }
 
 
@@ -241,7 +135,7 @@ ul li{
 
 /*假日*/
 .holiday{
-    background-color: rgba(253, 76, 76, 0.63);
+    background-color: rgb(255, 230, 230);
 }
 
 

@@ -19,9 +19,13 @@ h1{
 
 table{
     width: 80%;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
+    font-weight: 800;
+    box-shadow: 5px 5px 10px 2px #9d9d9d;
 }
-
+table input{
+    width: 80%;
+}
 input{
     font-size: 0.8rem;
     text-align: center;
@@ -31,7 +35,7 @@ input:disabled{
     border: none;
 }
 td{
-    border: 1px solid black;
+    outline: 1px solid #000000;
 }
 
 textarea{
@@ -41,4 +45,8 @@ textarea{
 
 .bg_color{
     background-color: #ebebeb;
+}
+
+form >div:last-child input{
+    margin: 20px 10px;
 }

@@ -1,30 +1,29 @@
 $(function(){
-    //　　縮放　詳細工時區塊
-    $('.worktime_data_li').on('click',function(){
-        var $detail=$(this).find('.wt_detail');
+    var year=$('#e_s_wt_month').val().split('-')[0];
+    //搜尋
+    
+    
+    //打開子畫面(詳細工時)
+    $('#wt_div table input').on('click',function(){
+       var $this_tr=$(this).parent().parent();
+        var first_day=$this_tr.find('span').eq(0),
+            id=$this_tr.find('td').eq('1').html().trim();
+        var a=first_day.text().split('/');
+        var month=parseInt(a[0]),
+            day=parseInt(a[1]);
+        //選擇的該筆顏色
+        $this_tr.addClass('select').siblings().removeClass('select');
         
-        if($detail.css('display')=='none'){
-            $detail.stop().fadeIn(500).show();
-            $(this).css({
-                height:'calc(1.5rem + 1.5rem + 3rem*3 + 3rem )' 
-            });
-        }else{
-            $(this).css({
-                height:'1.5rem' 
-            });
-            $detail.stop().fadeOut(500).hide(0);
-        }
+        var date=year+'-'+month+'-'+day
+        //src要改
+        var src='詳細工時.html?date='+date+'&id='+id;
         
-        
+        $('#cover_div iframe').attr('src',src);
+        $('#cover_div').stop().fadeIn(300);
     });
+    $('#cover_div').on('click',function(){
+        $(this).stop().fadeOut(300).hide(0);
+    })
     
     
-    // wt_detail防止
-    $('.wt_detail').on('click',function(e){
-       e.stopPropagation();
-    });
-    
-    
-    // 所有東西不得修改
-    $('.wt_detail_div').find('*').prop('disabled',true);
 });

@@ -5,7 +5,17 @@
     <title>員工管理</title>
     <link rel="stylesheet" type="text/css" href="css/e_manage.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-	<script src="js/e_manage.js"></script>
+	<script>
+        $(function(){    
+            $('#em_ul li').on('click',function(){
+                var id=$(this).attr('id');
+                if(!$(this).hasClass('em_li_sel')){
+                    $(this).addClass('em_li_sel').parent().siblings().find('li').removeClass('em_li_sel');
+                }
+
+            });
+        });
+    </script>
 </head>
 <body>
         <div id="e_manage">
