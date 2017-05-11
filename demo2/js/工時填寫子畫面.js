@@ -26,5 +26,15 @@ $(function(){
         });
     });
     
+    //提繳卻認
+    $('#submit').on('click',function(){
+        if(confirm('確認提交嗎?')){
+            if($('#pj_table input').val().lenght=='0'){
+                alert('沒有填完喔!小壞壞');
+                retutn false;
+            }
+            $(this).submit();
+        }
+    });
     
 });
