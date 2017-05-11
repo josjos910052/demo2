@@ -1,114 +1,64 @@
 $(function(){
+    make_checkbox_value();
+    sel_all_checkbox();
+    check_ckeckbox();
     
-    //全選/取消全選
-    allnotall();
-    check_on();
-    $(':checkbox').change(function(){
-        check_on();
+    $('#content_div table .checkbox').change(function(){
+        check_ckeckbox();
     });
     
-    //檢查未通過原因
-    check_R();
-    
-    //　　縮放　詳細工時區塊
-    $('.worktime_data_li').on('click',function(){
-        var $detail=$(this).find('.wt_detail');
+    //打開詳細
+    $('.detial_btn').on('click',function(){
+       var $this_tr=$(this).parent().parent();
+        $this_tr.addClass('sel').siblings().removeClass('sel');
         
-        if($detail.css('display')=='none'){
-            $detail.stop().fadeIn(500).show();
-            $(this).css({
-                height:'calc(1.5rem + 1.5rem + 3rem*3 + 3rem )' 
-            });
-        }else{
-            $(this).css({
-                height:'1.5rem' 
-            });
-            $detail.stop().fadeOut(500).hide(0);
-        } 
+        var id=$this_tr.find('.checkbox').val();
+        
+        var src='工時審核_詳細.html?id='+id;
+        $('#cover_div iframe').attr('src',src);
+        $('#cover_div').stop().fadeIn(300);
     });
     
-    //通過/不通過(假的)
-    ok_notok();
+    $('#m_wt_btn_div input').on('click',function(){
+        if(confirm('確定通過?')){
+            var all_checked=$('#content_div tbody .checkbox:checked').parent().parent().remove();
+            $(this).submit();
+        }
+    })
     
-    // wt_detail防止
-    $('.wt_detail,input[name="checkbox"]').on('click',function(e){
-       e.stopPropagation();
-    });
     
-    //防止修改資料
-    $('.wt_detail_div').find('*').prop('disabled',true);
+    
     
 });
 
 
 //全選/取消全選
-function allnotall(){
-    $('#m_wt_title_div').find('span').last().on('click',function(){
-       var status=$(this).text();
-        var $c_box=$('input[name="checkbox"]');
-        if('全選'==status){
-            $(this).text('取消全選');
-            $c_box.prop('checked',true);
-        }else{
-            $(this).text('全選');
-            $c_box.prop('checked',false);
-        }
-        check_on();
-    });
-   
+function sel_all_checkbox(){
+   $('#content_div thead .checkbox').on('click',function(){
+      var $all_checkbox=$('#content_div tbody td .checkbox');
+      if($(this).prop('checked')){
+          $all_checkbox.prop('checked',true);
+      }else{
+          $all_checkbox.prop('checked',false);
+      }
+   });
 }
 
 //確定有鉤子
-function check_on(){
-    var $c_box=$('input[name="checkbox"]');
-    var status=true;
+function check_ckeckbox(){    
     $('#m_wt_btn_div input').prop('disabled',true);
-    $c_box.each(function(){
-        if($(this).prop('checked')){
-            status=false;
-        }
-    });
-    $('#m_wt_btn_div input').prop('disabled',status);
+        if($('#content_div tbody .checkbox:checked').length>0){
+        $('#m_wt_btn_div input').prop('disabled',false);
+    }
 }
 
-//check不通過原因
-function check_R(){
-    var $btn_div=$('.m_wt_btn_div');
-    $btn_div.find('.m_wt_btn_notok').prop('disabled',true);
-    $btn_div.find('textarea').on('keyup',function(){
-        if(($(this).val().length!=0)){
-            $(this).siblings(".m_wt_btn_notok").last().prop('disabled',false);
-        }else{
-            $(this).siblings(".m_wt_btn_notok").last().prop('disabled',true);
-        }
+//製造checkbox的值
+function make_checkbox_value(){
+    $('#content_div tbody .checkbox').each(function(){
+       var id=$(this).parent().parent().find('td').eq(1).html().trim();
+        $(this).val(id);
     });
 }
 
 
 
-//假的送出
-function ok_notok(){
-    $('.m_wt_btn_ok').on('click',function(){
-       var  $header=$(this).parent().parent().siblings('.wt_header_div');
-       var id=$header.find('span').eq(1).text();
-        $header.parent().remove();
-        alert('id: '+id+"\n通過處理完成");
-    });
-    $('.m_wt_btn_notok').on('click',function(){
-       var  $header=$(this).parent().parent().siblings('.wt_header_div');
-       var id=$header.find('span').eq(1).text();
-        $header.parent().remove();
-        alert('id: '+id+"\n未通過處理完成");
-    });
-    
-    $('#m_wt_btn_div input').on('click',function(){
-        var arr=new Array;
-        $('[name="checkbox"]').each(function(){
-            if($(this).prop('checked')){
-                arr.push($(this).val());
-                $(this).parent().parent().parent().remove();
-            }
-        });
-        alert('id: '+arr+"\n通過處理完成");
-    });
-}

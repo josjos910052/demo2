@@ -14,9 +14,15 @@ $(function(){
         $add.find('textarea').html('');
         last_tr.after($add);
         
+        
+        var tr_s=$('.del_btn').parent().parent().siblings().length;
+        
         //刪除
         $('.del_btn').on('click',function(){
-           $(this).parents('tr').remove(); 
+            if(tr_s>3){
+                $(this).parents('tr').remove();
+                tr_s--;
+            }
         });
     });
     
