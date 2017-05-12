@@ -38,8 +38,10 @@ function sel_all_checkbox(){
       var $all_checkbox=$('#content_div tbody td .checkbox');
       if($(this).prop('checked')){
           $all_checkbox.prop('checked',true);
+          $('#m_wt_btn_div input').prop('disabled',false);
       }else{
           $all_checkbox.prop('checked',false);
+          $('#m_wt_btn_div input').prop('disabled',true);
       }
    });
 }
